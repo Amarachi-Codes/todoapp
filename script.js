@@ -58,8 +58,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
     //strike items
     const strikeout = document.querySelector('#strikeout')
     strikeout.addEventListener('click',()=>{
-        if(listitem.computedStyleMap.textDecoration = 'none'){
-            
+        if(listitem.style.textDecoration = 'none'){
+            listitem.style.textDecoration = 'line-through'
+        }else{
+            listitem.style.textDecoration ='none'
         }
     })
 })
