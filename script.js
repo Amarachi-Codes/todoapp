@@ -34,4 +34,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
     deletebtn.textContent ='Delete'
     const done = document.createElement('button')
     done.textContent ='Done'
+
+    // Add id to these elements
+    list.setAttribute('id','listitem')
+    deletebtn.setAttribute('id','deleteme')
+    done.setAttribute('id','strikeout')
 })
