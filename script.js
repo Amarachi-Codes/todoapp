@@ -39,4 +39,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
     list.setAttribute('id','listitem')
     deletebtn.setAttribute('id','deleteme')
     done.setAttribute('id','strikeout')
+
+    //Adding task
+    button.addEventListener('click',()=>{
+        list.value =taskInputValue
+        tasklist.appendChild(list)
+        tasklist.appendChild(deletebtn)
+        tasklist.appendChild(done)
+    })
+
+    //delete task
 })
