@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         tasklist.appendChild(list)
         tasklist.appendChild(deletebtn)
         tasklist.appendChild(done)
+        taskInputValue = ''
     })
 
     //delete task
