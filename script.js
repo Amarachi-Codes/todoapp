@@ -25,4 +25,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const taskInput = document.querySelector("#taskInput");
     const button =document.querySelector('#button')
     const tasklist = document.querySelector('#tasklist')
+    const taskInputValue = taskInput.value
+     
+
+    //creating some elements needed
+    const list = document.createElement('li')
+    const deletebtn = document.createElement('button')
+    deletebtn.textContent ='Delete'
+    const done = document.createElement('button')
+    done.textContent ='Done'
 })
