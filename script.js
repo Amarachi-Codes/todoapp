@@ -54,4 +54,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
     deleteItems.addEventListener('click',()=>{
         document.body.ul.removeChild(listitem)
     })
+
+    //strike items
+    const strikeout = document.querySelector('#strikeout')
+    strikeout.addEventListener('click',()=>{
+        if(listitem.computedStyleMap.textDecoration = 'none'){
+            
+        }
+    })
 })
