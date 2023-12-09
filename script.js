@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const taskInput = document.querySelector("#taskInput");
     const button =document.querySelector('#button')
     const tasklist = document.querySelector('#tasklist')
-    const taskInputValue = taskInput.value
+    
      
 
     //creating some elements needed
@@ -42,20 +42,23 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     //Adding task
     button.addEventListener('click',()=>{
-        list.value =taskInputValue
-        tasklist.appendChild(list)
-        tasklist.appendChild(deletebtn)
-        tasklist.appendChild(done)
+        let taskInputValue = taskInput.value
+        list.textContent =taskInputValue
+        tasklist.appendChild(list.cloneNode(true))
+        tasklist.appendChild(deletebtn.cloneNode(true))
+        tasklist.appendChild(done.cloneNode(true))
         taskInputValue = ''
     })
 
     //delete task
-    const deleteItems = document.querySelector('#deleteme')
+    // const deleteItems = document.querySelector('#deleteme')
     const listitem = document.querySelector('#listitem')
-    deleteItems.addEventListener('click',()=>{
-        document.body.ul.removeChild(listitem)
-        // or
-        // listitem = ''
+    tasklist.addEventListener('click',(event)=>{
+        if(event.target.id === 'deleteme'){ 
+        tasklist.removeChild(listitem)
+        tasklist.removeChild(deletebtn)
+        tasklist.removeChild(done)
+    }
     })
 
     //strike items
