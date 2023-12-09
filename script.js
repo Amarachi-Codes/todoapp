@@ -54,6 +54,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const listitem = document.querySelector('#listitem')
     deleteItems.addEventListener('click',()=>{
         document.body.ul.removeChild(listitem)
+        // or
+        // listitem = ''
     })
 
     //strike items
