@@ -49,4 +49,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
     })
 
     //delete task
+    const deleteItems = document.querySelector('#deleteme')
+    const listitem = document.querySelector('#listitem')
+    deleteItems.addEventListener('click',()=>{
+        document.body.ul.removeChild(listitem)
+    })
 })
