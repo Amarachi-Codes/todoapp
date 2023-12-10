@@ -1,26 +1,4 @@
 
-// document.addEventListener("DOMContentLoaded",()=>{
-// const taskInput = document.getElementById("task");
-// const enterbtn = document.getElementById("enter");
-// const list = document.getElementById("list");
-// const taskInputValue = taskInput.value.trim()
-
-// enterbtn.addEventListener("click",()=>{
-//     if(taskInputValue !== " "){
-//         const li = document.createElement("li")
-//         li.textContent = taskInputValue
-//         list.appendChild(li);
-        
-//         //clear input value
-//         taskInput.value = " "
-        
-//     }
-// })
-
-
-// })
-
-
 document.addEventListener('DOMContentLoaded', ()=>{
     const taskInput = document.querySelector("#taskInput");
     const button =document.querySelector('#button')
@@ -47,7 +25,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         tasklist.appendChild(list.cloneNode(true))
         tasklist.appendChild(deletebtn.cloneNode(true))
         tasklist.appendChild(done.cloneNode(true))
-        taskInputValue = ''
+        
+        taskInput.value= '' //clear Input value
     })
 
     //delete task
@@ -62,12 +41,16 @@ document.addEventListener('DOMContentLoaded', ()=>{
     })
 
     //strike items
+    
     const strikeout = document.querySelector('#strikeout')
-    strikeout.addEventListener('click',()=>{
-        if(listitem.style.textDecoration = 'none'){
+    strikeout.addEventListener("click", ()=> {
+        console.log(strikeout);
+        if(listitem.style.textDecoration === 'none'){
             listitem.style.textDecoration = 'line-through'
         }else{
-            listitem.style.textDecoration ='none'
+            listitem.style.textDecoration = 'none'
         }
     })
+    
 })
+
